@@ -122,12 +122,6 @@ def main():
                         print "=" * 60
                         print "Done..."
                         break
-                except urllib2.HTTPError, val:
-                    if '404' in str(val): 
-                        print "Couldn't download (404) " + link
-                except urllib2.URLError, val:
-                    print "URL Error: " + link
-                    print val
                 except Exception, e:
                     print 'General error: ' + e.message
                     continue
